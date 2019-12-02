@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="common/header :: common-header">
+</head>
+
+<body>
+<div class="bg">
+
+    <div th:replace="common/header :: navbar"></div>
+
+    <div>
+        <div class="home-headline">
+            <span> Featured Items </span>
+            <hr style="margin-top: -15px;"/>
+        </div>
+    </div>
+
+    <div>
+        <ul class="list-group list-group-flush">
+            <tr th:each="product: ${products}">
+                <li class="list-group-item">
+                    <div class="container">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <img src="/image/test.png" class="img-thumbnail">
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="row-sm">
+                                            <td class="text-white bg-dark" th:text="${product.name}"></td>
+                                        </div>
+                                        <div class="row-sm">
+                                            <td class="text-white bg-dark" th:text="${product.price}"></td>
+                                        </div>
+                                        <div>
+                                            <a class="btn btn-primary" href="#" role="button">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </tr>
+        </ul>
+    </div>
+
+</div>
+
+<div th:replace="common/header :: body-bottom-scripts">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+body {
+    padding-top: 1px;
+    padding-bottom 1px;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.box {
+    border: 1px solid gray;
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+.bg {
+  background-image: url("/image/bg.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.list-group-item {
+background-color: transparent;
+border-top: 1px solid #ddd;
+border-radius: 0;
+color: #fff;
+}
+
+.home-headline {
+    font-family: 'Times New Roman'
+    font-size:75px;
+    margin: auto;
+    text-align:center;
+    color: #fff;
+    margin-top: 30px;
+}
+
+.card {
+    color: #000000;
+}
+
+.home-headline span {
+    background-color: #231F20;
+    padding: 5px 20px;
+}

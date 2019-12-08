@@ -21,18 +21,23 @@ body {
 }
 
 .bg {
-  background-image: url("/image/bg.png");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url("/img/bg.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-thumbnail{
+    width:150px;
+    height:150px;
 }
 
 .list-group-item {
-background-color: transparent;
-border-top: 1px solid #ddd;
-border-radius: 0;
-color: #fff;
+    background-color: transparent;
+    border-top: 1px solid #ddd;
+    border-radius: 0;
+    color: #fff;
 }
 
 .home-headline {

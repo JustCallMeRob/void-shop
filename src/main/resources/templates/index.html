@@ -25,7 +25,9 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-sm">
-                                        <img src="/image/test.png" class="img-thumbnail">
+                                        <td>
+                                            <img th:src="${product.pic_path}" class="img-thumbnail">
+                                        </td>
                                     </div>
                                     <div class="col-sm">
                                         <div class="row-sm">
@@ -35,7 +37,7 @@
                                             <td class="text-white bg-dark" th:text="${product.price}"></td>
                                         </div>
                                         <div>
-                                            <a class="btn btn-primary" href="#" role="button">Details</a>
+                                            <a class="btn btn-primary" th:href="@{'/product?id=' + ${product.name}}" role="button">Details</a>
                                         </div>
                                     </div>
                                 </div>

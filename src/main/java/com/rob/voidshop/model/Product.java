@@ -12,6 +12,7 @@ public class Product {
     private String name;
     private String description;
     private String price;
+    private String pic_path;
 
     @ManyToMany
     private Set<Cart> carts;
@@ -21,11 +22,12 @@ public class Product {
 
     protected Product(){}
 
-    public Product(Long id, String name, String description, String price, Set<Cart> carts, Set<Order> orders) {
+    public Product(Long id, String name, String description, String price, String pic_path, Set<Cart> carts, Set<Order> orders) {
         this.productId = id;
         this.name = name;
         this.description = description;
         this.price = price;
+        this.pic_path = pic_path;
         this.carts = carts;
         this.orders = orders;
     }
@@ -34,6 +36,13 @@ public class Product {
         this.name = name;
         this.description = description;
         this.price = price;
+    }
+
+    public Product(String name, String description, String price, String pic_path){
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.pic_path = pic_path;
     }
 
     public Long getId() {
@@ -60,6 +69,10 @@ public class Product {
         return orders;
     }
 
+    public String getPic_path() {
+        return pic_path;
+    }
+
     public void setId(Long id) {
         this.productId = id;
     }
@@ -82,6 +95,10 @@ public class Product {
 
     public void setOrders(Set<Order> orders) {
         this.orders = orders;
+    }
+
+    public void setPic_path(String pic_path) {
+        this.pic_path = pic_path;
     }
 
     @Override

@@ -30,11 +30,16 @@ public class ShopApplication {
 			userRep.save(new User("harry", "hunter1"));
 			userRep.save(new User("larry", "hunter2"));
 
-			productRep.save(new Product("Compressed anti-matter", "Good with anti-milk", "-50$$"));
-			productRep.save(new Product("Compressed anti-anti-matter", "Good with milk", "50$$"));
-			productRep.save(new Product("Gluten enriched entropy", "For anyone who wants to decrease the complexity of their lives", "50$$"));
-			productRep.save(new Product("Free range Shoggoth", "Warning! Incomprehensible", "100$$"));
-			productRep.save(new Product("test", "test", "50000$$"));
+			String imagePath = "/img/1.png";
+			productRep.save(new Product("Compressed anti-matter", "Good with anti-milk", "-50$$", imagePath));
+			imagePath = "/img/2.png";
+			productRep.save(new Product("Compressed anti-anti-matter", "Good with milk", "50$$", imagePath));
+			imagePath = "/img/3.png";
+			productRep.save(new Product("Gluten enriched entropy", "For anyone who wants to decrease the complexity of their lives", "50$$", imagePath));
+			imagePath = "/img/4.png";
+			productRep.save(new Product("Free range Shoggoth", "Warning! Incomprehensible, you've met with a terrible faith.", "100$$", imagePath));
+			imagePath = "/img/5.png";
+			productRep.save(new Product("Tiamat creation framework license", "A must have for any creator.", "50000$$", imagePath));
 
 
 			log.info("Customers found with findAll():");
@@ -51,11 +56,10 @@ public class ShopApplication {
 			log.info("");
 
 			Product product = productRep.findByName("Free range Shoggoth");
-			log.info("Prodcut found with findByName(Free range Shoggoth):");
+			log.info("Product found with findByName(Free range Shoggoth):");
 			log.info("--------------------------------");
 			log.info(product.toString());
 			log.info("");
 		};
 	}
-
 }

@@ -1,8 +1,3 @@
 # void-shop
 Webdev project
 
-
-
-
-
-
